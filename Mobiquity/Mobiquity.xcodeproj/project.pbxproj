@@ -16,6 +16,7 @@
 		76B9600C278DC73400ED5DA4 /* MockServiceClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B9600B278DC73400ED5DA4 /* MockServiceClient.swift */; };
 		76B9600E278DC80300ED5DA4 /* MockService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B9600D278DC80300ED5DA4 /* MockService.swift */; };
 		76B96010278DD6C500ED5DA4 /* SearchParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B9600F278DD6C500ED5DA4 /* SearchParameters.swift */; };
+		76B96016278DE01A00ED5DA4 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 76B96015278DE01A00ED5DA4 /* Kingfisher */; };
 		76C84D38278C818F00C327FA /* MobiquityApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C84D37278C818F00C327FA /* MobiquityApp.swift */; };
 		76C84D3A278C818F00C327FA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C84D39278C818F00C327FA /* ContentView.swift */; };
 		76C84D3C278C819100C327FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76C84D3B278C819100C327FA /* Assets.xcassets */; };
@@ -83,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76B96016278DE01A00ED5DA4 /* Kingfisher in Frameworks */,
 				76B95FFC278D8C7E00ED5DA4 /* NetworkProvider in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -274,6 +276,7 @@
 			name = Mobiquity;
 			packageProductDependencies = (
 				76B95FFB278D8C7E00ED5DA4 /* NetworkProvider */,
+				76B96015278DE01A00ED5DA4 /* Kingfisher */,
 			);
 			productName = Mobiquity;
 			productReference = 76C84D34278C818F00C327FA /* Mobiquity.app */;
@@ -347,6 +350,9 @@
 				Base,
 			);
 			mainGroup = 76C84D2B278C818F00C327FA;
+			packageReferences = (
+				76B96014278DE01A00ED5DA4 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 76C84D35278C818F00C327FA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -751,10 +757,26 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCRemoteSwiftPackageReference section */
+		76B96014278DE01A00ED5DA4 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
 /* Begin XCSwiftPackageProductDependency section */
 		76B95FFB278D8C7E00ED5DA4 /* NetworkProvider */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = NetworkProvider;
+		};
+		76B96015278DE01A00ED5DA4 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 76B96014278DE01A00ED5DA4 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

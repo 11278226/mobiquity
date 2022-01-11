@@ -6,13 +6,22 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct CardView: View {
-    let title: String
+    var item: Item
+    static let baseImageString = "https://live.staticflickr.com/"
+
     var body: some View {
         VStack {
-            RoundedRectangle(cornerRadius: 12).foregroundColor(.random)
-            Text(title)
+            KFImage(URL(string: CardView.baseImageString+item.server+"/"+item.id+"_"+item.secret+"_w.png")!)
+                .resizable()
+                .scaledToFit()
+                .cornerRadius(10)
+                .overlay(RoundedRectangle(cornerRadius: 10)
+                    .stroke(Color.orange, lineWidth: 4))
+                .shadow(radius: 10)
+            Text(item.title)
                 .font(.title2)
                 .lineLimit(2)
         }
@@ -22,7 +31,8 @@ struct CardView: View {
 
 struct CardView_Previews: PreviewProvider {
     static var previews: CardView {
-        CardView(title: "Hello world")
+        let item1 = Item(id: "1", owner: "", secret: "", server: "", farm: 1, title: "Hello One", isPublic: 1, isFriend: 0, isFamily: 0)
+        CardView(item: item1)
     }
 }
 

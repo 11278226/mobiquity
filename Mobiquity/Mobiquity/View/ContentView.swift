@@ -5,10 +5,12 @@
 //  Created by Diarmuid O'Keeffe on 10/01/2022.
 //
 
+import UIKit
 import SwiftUI
 
 struct ContentView: View {
     @ObservedObject var viewModel: ItemListViewModel
+    @State private var searchText = ""
     
     var columns: [GridItem] = [
         GridItem(.flexible()),
@@ -24,7 +26,7 @@ struct ContentView: View {
         ScrollView {
             LazyVGrid(columns: columns, spacing: 16) {
                 ForEach(viewModel.datasource) { item in
-                    CardView(title: item.title)
+                    CardView(item: item)
                         .frame(height: height)
                 }
             }
