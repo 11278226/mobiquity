@@ -14,12 +14,10 @@ struct ContentView: View {
         GridItem(.flexible()),
         GridItem(.flexible()),
     ]
-    let height: CGFloat = 150
-    
-    let cards: [Item] = [Item(title: "One"), Item(title: "Two"), Item(title: "Three"), Item(title: "Four"), Item(title: "Five"), Item(title: "Six"), Item(title: "Seven"), Item(title: "Eight"), Item(title: "Nine"), Item(title: "Ten")]
+    let height: CGFloat = 240
     
     init() {
-        self.viewModel = ItemListViewModel(items: cards)
+        self.viewModel = ItemListViewModel()
     }
     
     var body: some View {
@@ -31,6 +29,8 @@ struct ContentView: View {
                 }
             }
             .padding()
+        }.onAppear {
+            viewModel.loadData()
         }
     }
 }

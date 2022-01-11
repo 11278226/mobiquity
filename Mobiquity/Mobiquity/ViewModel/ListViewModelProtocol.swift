@@ -8,7 +8,8 @@
 import Foundation
 
 protocol ListViewModelProtocol: ObservableObject {
-  associatedtype DataItem
+    associatedtype DataItem
 
-  var datasource: DataItem { get }
+    var datasource: DataItem { get }
+    func loadData()
 }
