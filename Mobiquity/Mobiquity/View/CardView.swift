@@ -14,6 +14,7 @@ struct CardView: View {
             RoundedRectangle(cornerRadius: 12).foregroundColor(.random)
             Text(title)
                 .font(.title2)
+                .lineLimit(2)
         }
         
     }

@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		76B95FF9278D8C0600ED5DA4 /* FlickrService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B95FF8278D8C0600ED5DA4 /* FlickrService.swift */; };
+		76B95FFC278D8C7E00ED5DA4 /* NetworkProvider in Frameworks */ = {isa = PBXBuildFile; productRef = 76B95FFB278D8C7E00ED5DA4 /* NetworkProvider */; };
+		76B96003278D91A600ED5DA4 /* FlickrRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B96002278D91A600ED5DA4 /* FlickrRepository.swift */; };
+		76B96005278D91B500ED5DA4 /* FlickrRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B96004278D91B500ED5DA4 /* FlickrRepositoryProtocol.swift */; };
+		76B96007278D924E00ED5DA4 /* FlickrServiceClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B96006278D924E00ED5DA4 /* FlickrServiceClient.swift */; };
+		76B96009278DB2A600ED5DA4 /* ImageList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B96008278DB2A600ED5DA4 /* ImageList.swift */; };
+		76B9600C278DC73400ED5DA4 /* MockServiceClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B9600B278DC73400ED5DA4 /* MockServiceClient.swift */; };
+		76B9600E278DC80300ED5DA4 /* MockService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B9600D278DC80300ED5DA4 /* MockService.swift */; };
+		76B96010278DD6C500ED5DA4 /* SearchParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B9600F278DD6C500ED5DA4 /* SearchParameters.swift */; };
 		76C84D38278C818F00C327FA /* MobiquityApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C84D37278C818F00C327FA /* MobiquityApp.swift */; };
 		76C84D3A278C818F00C327FA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C84D39278C818F00C327FA /* ContentView.swift */; };
 		76C84D3C278C819100C327FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76C84D3B278C819100C327FA /* Assets.xcassets */; };
@@ -16,7 +25,7 @@
 		76C84D55278C819100C327FA /* MobiquityUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C84D54278C819100C327FA /* MobiquityUITestsLaunchTests.swift */; };
 		76C84D65278C8B0900C327FA /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C84D64278C8B0900C327FA /* Item.swift */; };
 		76C84D6A278C8B5900C327FA /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C84D69278C8B5900C327FA /* CardView.swift */; };
-		76C84D6D278C957700C327FA /* ItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C84D6C278C957700C327FA /* ItemViewModel.swift */; };
+		76C84D6D278C957700C327FA /* ItemListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C84D6C278C957700C327FA /* ItemListViewModel.swift */; };
 		76C84D6F278C96A100C327FA /* ListViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C84D6E278C96A100C327FA /* ListViewModelProtocol.swift */; };
 		76C84D74278CBACC00C327FA /* ItemListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C84D73278CBACC00C327FA /* ItemListViewModelTests.swift */; };
 		76C84D76278CBAE000C327FA /* CardViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C84D75278CBAE000C327FA /* CardViewTests.swift */; };
@@ -41,6 +50,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		76B95FF8278D8C0600ED5DA4 /* FlickrService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrService.swift; sourceTree = "<group>"; };
+		76B96000278D8E7500ED5DA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		76B96002278D91A600ED5DA4 /* FlickrRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrRepository.swift; sourceTree = "<group>"; };
+		76B96004278D91B500ED5DA4 /* FlickrRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrRepositoryProtocol.swift; sourceTree = "<group>"; };
+		76B96006278D924E00ED5DA4 /* FlickrServiceClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrServiceClient.swift; sourceTree = "<group>"; };
+		76B96008278DB2A600ED5DA4 /* ImageList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageList.swift; sourceTree = "<group>"; };
+		76B9600B278DC73400ED5DA4 /* MockServiceClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockServiceClient.swift; sourceTree = "<group>"; };
+		76B9600D278DC80300ED5DA4 /* MockService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockService.swift; sourceTree = "<group>"; };
+		76B9600F278DD6C500ED5DA4 /* SearchParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchParameters.swift; sourceTree = "<group>"; };
 		76C84D34278C818F00C327FA /* Mobiquity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mobiquity.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		76C84D37278C818F00C327FA /* MobiquityApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobiquityApp.swift; sourceTree = "<group>"; };
 		76C84D39278C818F00C327FA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -53,7 +71,7 @@
 		76C84D54278C819100C327FA /* MobiquityUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobiquityUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		76C84D64278C8B0900C327FA /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		76C84D69278C8B5900C327FA /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
-		76C84D6C278C957700C327FA /* ItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewModel.swift; sourceTree = "<group>"; };
+		76C84D6C278C957700C327FA /* ItemListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListViewModel.swift; sourceTree = "<group>"; };
 		76C84D6E278C96A100C327FA /* ListViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModelProtocol.swift; sourceTree = "<group>"; };
 		76C84D73278CBACC00C327FA /* ItemListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListViewModelTests.swift; sourceTree = "<group>"; };
 		76C84D75278CBAE000C327FA /* CardViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewTests.swift; sourceTree = "<group>"; };
@@ -65,6 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76B95FFC278D8C7E00ED5DA4 /* NetworkProvider in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +104,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		76B95FF7278D8BE900ED5DA4 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				76B95FF8278D8C0600ED5DA4 /* FlickrService.swift */,
+				76B96006278D924E00ED5DA4 /* FlickrServiceClient.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		76B95FFA278D8C7E00ED5DA4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		76B96001278D918900ED5DA4 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				76B96002278D91A600ED5DA4 /* FlickrRepository.swift */,
+				76B96004278D91B500ED5DA4 /* FlickrRepositoryProtocol.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		76B9600A278DC71F00ED5DA4 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				76B9600B278DC73400ED5DA4 /* MockServiceClient.swift */,
+				76B9600D278DC80300ED5DA4 /* MockService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		76C84D2B278C818F00C327FA = {
 			isa = PBXGroup;
 			children = (
@@ -92,6 +145,7 @@
 				76C84D47278C819100C327FA /* MobiquityTests */,
 				76C84D51278C819100C327FA /* MobiquityUITests */,
 				76C84D35278C818F00C327FA /* Products */,
+				76B95FFA278D8C7E00ED5DA4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -108,9 +162,12 @@
 		76C84D36278C818F00C327FA /* Mobiquity */ = {
 			isa = PBXGroup;
 			children = (
+				76B96000278D8E7500ED5DA4 /* Info.plist */,
+				76B95FF7278D8BE900ED5DA4 /* Services */,
 				76C84D6B278C8C0800C327FA /* ViewModel */,
 				76C84D66278C8B1400C327FA /* View */,
 				76C84D61278C8AE100C327FA /* Model */,
+				76B96001278D918900ED5DA4 /* Repository */,
 				76C84D37278C818F00C327FA /* MobiquityApp.swift */,
 				76C84D3B278C819100C327FA /* Assets.xcassets */,
 				76C84D3D278C819100C327FA /* Preview Content */,
@@ -129,6 +186,7 @@
 		76C84D47278C819100C327FA /* MobiquityTests */ = {
 			isa = PBXGroup;
 			children = (
+				76B9600A278DC71F00ED5DA4 /* Services */,
 				76C84D70278CBA9200C327FA /* ViewModel */,
 				76C84D71278CBA9A00C327FA /* View */,
 				76C84D72278CBAA200C327FA /* Model */,
@@ -150,6 +208,8 @@
 			isa = PBXGroup;
 			children = (
 				76C84D64278C8B0900C327FA /* Item.swift */,
+				76B96008278DB2A600ED5DA4 /* ImageList.swift */,
+				76B9600F278DD6C500ED5DA4 /* SearchParameters.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -166,7 +226,7 @@
 		76C84D6B278C8C0800C327FA /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				76C84D6C278C957700C327FA /* ItemViewModel.swift */,
+				76C84D6C278C957700C327FA /* ItemListViewModel.swift */,
 				76C84D6E278C96A100C327FA /* ListViewModelProtocol.swift */,
 			);
 			path = ViewModel;
@@ -212,6 +272,9 @@
 			dependencies = (
 			);
 			name = Mobiquity;
+			packageProductDependencies = (
+				76B95FFB278D8C7E00ED5DA4 /* NetworkProvider */,
+			);
 			productName = Mobiquity;
 			productReference = 76C84D34278C818F00C327FA /* Mobiquity.app */;
 			productType = "com.apple.product-type.application";
@@ -327,10 +390,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				76C84D3A278C818F00C327FA /* ContentView.swift in Sources */,
+				76B95FF9278D8C0600ED5DA4 /* FlickrService.swift in Sources */,
 				76C84D38278C818F00C327FA /* MobiquityApp.swift in Sources */,
+				76B96010278DD6C500ED5DA4 /* SearchParameters.swift in Sources */,
+				76B96007278D924E00ED5DA4 /* FlickrServiceClient.swift in Sources */,
+				76B96009278DB2A600ED5DA4 /* ImageList.swift in Sources */,
 				76C84D6A278C8B5900C327FA /* CardView.swift in Sources */,
+				76B96005278D91B500ED5DA4 /* FlickrRepositoryProtocol.swift in Sources */,
+				76B96003278D91A600ED5DA4 /* FlickrRepository.swift in Sources */,
 				76C84D65278C8B0900C327FA /* Item.swift in Sources */,
-				76C84D6D278C957700C327FA /* ItemViewModel.swift in Sources */,
+				76C84D6D278C957700C327FA /* ItemListViewModel.swift in Sources */,
 				76C84D6F278C96A100C327FA /* ListViewModelProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -341,8 +410,10 @@
 			files = (
 				76C84D78278CBAF000C327FA /* ItemTests.swift in Sources */,
 				76C84D49278C819100C327FA /* MobiquityTests.swift in Sources */,
+				76B9600C278DC73400ED5DA4 /* MockServiceClient.swift in Sources */,
 				76C84D74278CBACC00C327FA /* ItemListViewModelTests.swift in Sources */,
 				76C84D76278CBAE000C327FA /* CardViewTests.swift in Sources */,
+				76B9600E278DC80300ED5DA4 /* MockService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -497,6 +568,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Mobiquity/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Mobiquity/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -526,6 +598,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Mobiquity/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Mobiquity/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -677,6 +750,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		76B95FFB278D8C7E00ED5DA4 /* NetworkProvider */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = NetworkProvider;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 76C84D2C278C818F00C327FA /* Project object */;
 }
