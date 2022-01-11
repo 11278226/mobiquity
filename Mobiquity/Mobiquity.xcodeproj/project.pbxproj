@@ -14,6 +14,13 @@
 		76C84D49278C819100C327FA /* MobiquityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C84D48278C819100C327FA /* MobiquityTests.swift */; };
 		76C84D53278C819100C327FA /* MobiquityUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C84D52278C819100C327FA /* MobiquityUITests.swift */; };
 		76C84D55278C819100C327FA /* MobiquityUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C84D54278C819100C327FA /* MobiquityUITestsLaunchTests.swift */; };
+		76C84D65278C8B0900C327FA /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C84D64278C8B0900C327FA /* Item.swift */; };
+		76C84D6A278C8B5900C327FA /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C84D69278C8B5900C327FA /* CardView.swift */; };
+		76C84D6D278C957700C327FA /* ItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C84D6C278C957700C327FA /* ItemViewModel.swift */; };
+		76C84D6F278C96A100C327FA /* ListViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C84D6E278C96A100C327FA /* ListViewModelProtocol.swift */; };
+		76C84D74278CBACC00C327FA /* ItemListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C84D73278CBACC00C327FA /* ItemListViewModelTests.swift */; };
+		76C84D76278CBAE000C327FA /* CardViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C84D75278CBAE000C327FA /* CardViewTests.swift */; };
+		76C84D78278CBAF000C327FA /* ItemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C84D77278CBAF000C327FA /* ItemTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +51,13 @@
 		76C84D4E278C819100C327FA /* MobiquityUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MobiquityUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		76C84D52278C819100C327FA /* MobiquityUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobiquityUITests.swift; sourceTree = "<group>"; };
 		76C84D54278C819100C327FA /* MobiquityUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobiquityUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		76C84D64278C8B0900C327FA /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		76C84D69278C8B5900C327FA /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		76C84D6C278C957700C327FA /* ItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewModel.swift; sourceTree = "<group>"; };
+		76C84D6E278C96A100C327FA /* ListViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModelProtocol.swift; sourceTree = "<group>"; };
+		76C84D73278CBACC00C327FA /* ItemListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListViewModelTests.swift; sourceTree = "<group>"; };
+		76C84D75278CBAE000C327FA /* CardViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewTests.swift; sourceTree = "<group>"; };
+		76C84D77278CBAF000C327FA /* ItemTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,8 +108,10 @@
 		76C84D36278C818F00C327FA /* Mobiquity */ = {
 			isa = PBXGroup;
 			children = (
+				76C84D6B278C8C0800C327FA /* ViewModel */,
+				76C84D66278C8B1400C327FA /* View */,
+				76C84D61278C8AE100C327FA /* Model */,
 				76C84D37278C818F00C327FA /* MobiquityApp.swift */,
-				76C84D39278C818F00C327FA /* ContentView.swift */,
 				76C84D3B278C819100C327FA /* Assets.xcassets */,
 				76C84D3D278C819100C327FA /* Preview Content */,
 			);
@@ -113,6 +129,9 @@
 		76C84D47278C819100C327FA /* MobiquityTests */ = {
 			isa = PBXGroup;
 			children = (
+				76C84D70278CBA9200C327FA /* ViewModel */,
+				76C84D71278CBA9A00C327FA /* View */,
+				76C84D72278CBAA200C327FA /* Model */,
 				76C84D48278C819100C327FA /* MobiquityTests.swift */,
 			);
 			path = MobiquityTests;
@@ -125,6 +144,56 @@
 				76C84D54278C819100C327FA /* MobiquityUITestsLaunchTests.swift */,
 			);
 			path = MobiquityUITests;
+			sourceTree = "<group>";
+		};
+		76C84D61278C8AE100C327FA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				76C84D64278C8B0900C327FA /* Item.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		76C84D66278C8B1400C327FA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				76C84D39278C818F00C327FA /* ContentView.swift */,
+				76C84D69278C8B5900C327FA /* CardView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		76C84D6B278C8C0800C327FA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				76C84D6C278C957700C327FA /* ItemViewModel.swift */,
+				76C84D6E278C96A100C327FA /* ListViewModelProtocol.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		76C84D70278CBA9200C327FA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				76C84D73278CBACC00C327FA /* ItemListViewModelTests.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		76C84D71278CBA9A00C327FA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				76C84D75278CBAE000C327FA /* CardViewTests.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		76C84D72278CBAA200C327FA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				76C84D77278CBAF000C327FA /* ItemTests.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,6 +328,10 @@
 			files = (
 				76C84D3A278C818F00C327FA /* ContentView.swift in Sources */,
 				76C84D38278C818F00C327FA /* MobiquityApp.swift in Sources */,
+				76C84D6A278C8B5900C327FA /* CardView.swift in Sources */,
+				76C84D65278C8B0900C327FA /* Item.swift in Sources */,
+				76C84D6D278C957700C327FA /* ItemViewModel.swift in Sources */,
+				76C84D6F278C96A100C327FA /* ListViewModelProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,7 +339,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76C84D78278CBAF000C327FA /* ItemTests.swift in Sources */,
 				76C84D49278C819100C327FA /* MobiquityTests.swift in Sources */,
+				76C84D74278CBACC00C327FA /* ItemListViewModelTests.swift in Sources */,
+				76C84D76278CBAE000C327FA /* CardViewTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
