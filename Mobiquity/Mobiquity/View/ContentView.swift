@@ -9,7 +9,7 @@ import UIKit
 import SwiftUI
 
 struct ContentView: View {
-    @ObservedObject var viewModel: ItemListViewModel
+    @StateObject var viewModel: ItemListViewModel = ItemListViewModel()
     @State private var searchText = ""
     @State private var page: Int = 1
     @State var gotoSearchPage: Bool = false
@@ -19,10 +19,6 @@ struct ContentView: View {
         GridItem(.flexible()),
     ]
     let height: CGFloat = 260
-    
-    init() {
-        self.viewModel = ItemListViewModel()
-    }
     
     var body: some View {
         NavigationView {

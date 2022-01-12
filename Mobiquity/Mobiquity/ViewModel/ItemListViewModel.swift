@@ -19,7 +19,7 @@ class ItemListViewModel: ListViewModelProtocol {
     
     func loadData(searchParameters: SearchParameters) {
         guard let flickrRepo = repository as? FlickrRepository, searchParameters.page < 6 else { return }
-        
+                
         addSearchToHistory(searchParameters: searchParameters)
 
         flickrRepo.getImages(searchParameters: searchParameters)
