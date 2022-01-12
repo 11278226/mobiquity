@@ -35,7 +35,7 @@ class ItemListViewModelTests: XCTestCase {
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         mockServiceClient.error = false
         successExpectation = expectation(description: "Get Movies Success")
-        itemListViewModel.loadData()
+        itemListViewModel.loadData(searchParameters: SearchParameters(text: ""))
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
             self.successExpectation?.fulfill()
         }
@@ -50,7 +50,7 @@ class ItemListViewModelTests: XCTestCase {
         let repository = FlickrRepository(client: mockServiceClient)
         let itemListViewModel = ItemListViewModel(repository: repository)
         failureExpectation = expectation(description: "Get Movies Failure")
-        itemListViewModel.loadData()
+        itemListViewModel.loadData(searchParameters: SearchParameters(text: ""))
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
             self.failureExpectation?.fulfill()
         }

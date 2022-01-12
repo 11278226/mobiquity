@@ -23,7 +23,7 @@ struct CardView: View {
                 .shadow(radius: 10)
             Text(item.title)
                 .font(.title2)
-                .lineLimit(2)
+                .lineLimit(3)
         }
         
     }

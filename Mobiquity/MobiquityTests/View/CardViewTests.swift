@@ -21,6 +21,6 @@ class CardViewTests: XCTestCase {
     }
 
     func testPreview() throws {
-        XCTAssertEqual(cardView.title, CardView_Previews.previews.title)
+        XCTAssertEqual(cardView.item.title, CardView_Previews.previews.item.title)
     }
 }

@@ -18,7 +18,8 @@ class FlickrRepository: FlickrRepositoryProtocol {
         self.client = client
     }
 
-    func getImages() {
+    func getImages(searchParameters: SearchParameters) {
+        client?.service = FlickrService.getImages(parameters: searchParameters)
         fetchImages(client: client!)
     }
 

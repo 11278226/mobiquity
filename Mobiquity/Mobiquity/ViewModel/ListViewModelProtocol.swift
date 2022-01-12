@@ -11,5 +11,5 @@ protocol ListViewModelProtocol: ObservableObject {
     associatedtype DataItem
 
     var datasource: DataItem { get }
-    func loadData()
+    func loadData(searchParameters: SearchParameters)
 }

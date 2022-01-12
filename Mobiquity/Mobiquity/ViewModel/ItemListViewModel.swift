@@ -16,10 +16,10 @@ class ItemListViewModel: ListViewModelProtocol {
         self.repository = repository
     }
     
-    func loadData() {
-        guard let flickrRepo = repository as? FlickrRepository else { return }
+    func loadData(searchParameters: SearchParameters) {
+        guard let flickrRepo = repository as? FlickrRepository, searchParameters.page < 6 else { return }
 
-        flickrRepo.getImages()
+        flickrRepo.getImages(searchParameters: searchParameters)
 
         flickrRepo.$imageList.sink { images in
             self.handleSuccess(data: images)
@@ -36,7 +36,11 @@ class ItemListViewModel: ListViewModelProtocol {
 
 private extension ItemListViewModel {
     func handleSuccess(data: ImageList) {
-        datasource = data.photos
+        if data.page != 1 {
+            datasource.append(contentsOf: data.photos)
+        } else {
+            datasource = data.photos
+        }
     }
 
     func handleFailure(error: Error) {

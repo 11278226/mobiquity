@@ -9,12 +9,10 @@ import Foundation
 
 struct SearchParameters {
     var text: String
-    var page: Int?
-    var perPage: Int?
+    var page: Int
 
-    public init(text: String, page: Int?, perPage: Int?) {
+    public init(text: String, page: Int = 1) {
         self.text = text
         self.page = page
-        self.perPage = perPage
     }
 }
