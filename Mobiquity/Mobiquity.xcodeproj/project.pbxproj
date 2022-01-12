@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		7627D115278F18970030EA65 /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7627D114278F18970030EA65 /* SearchBarView.swift */; };
+		7627D11C278F23DE0030EA65 /* SearchHistoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7627D11B278F23DE0030EA65 /* SearchHistoryProtocol.swift */; };
+		762B4473278F262B00BB28F0 /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = 762B4472278F262B00BB28F0 /* SQLite */; };
+		762B4475278F27E000BB28F0 /* SearchHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762B4474278F27E000BB28F0 /* SearchHistoryView.swift */; };
+		762B4478278F301400BB28F0 /* SearchHistoryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762B4477278F301400BB28F0 /* SearchHistoryManager.swift */; };
 		76B95FF9278D8C0600ED5DA4 /* FlickrService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B95FF8278D8C0600ED5DA4 /* FlickrService.swift */; };
 		76B95FFC278D8C7E00ED5DA4 /* NetworkProvider in Frameworks */ = {isa = PBXBuildFile; productRef = 76B95FFB278D8C7E00ED5DA4 /* NetworkProvider */; };
 		76B96003278D91A600ED5DA4 /* FlickrRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B96002278D91A600ED5DA4 /* FlickrRepository.swift */; };
@@ -54,6 +58,9 @@
 
 /* Begin PBXFileReference section */
 		7627D114278F18970030EA65 /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
+		7627D11B278F23DE0030EA65 /* SearchHistoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHistoryProtocol.swift; sourceTree = "<group>"; };
+		762B4474278F27E000BB28F0 /* SearchHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHistoryView.swift; sourceTree = "<group>"; };
+		762B4477278F301400BB28F0 /* SearchHistoryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHistoryManager.swift; sourceTree = "<group>"; };
 		76B95FF8278D8C0600ED5DA4 /* FlickrService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrService.swift; sourceTree = "<group>"; };
 		76B96000278D8E7500ED5DA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		76B96002278D91A600ED5DA4 /* FlickrRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrRepository.swift; sourceTree = "<group>"; };
@@ -88,6 +95,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				762B4473278F262B00BB28F0 /* SQLite in Frameworks */,
 				76B96016278DE01A00ED5DA4 /* Kingfisher in Frameworks */,
 				76B95FFC278D8C7E00ED5DA4 /* NetworkProvider in Frameworks */,
 			);
@@ -110,6 +118,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		762B4476278F300100BB28F0 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				762B4477278F301400BB28F0 /* SearchHistoryManager.swift */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		762B4479278F36BC00BB28F0 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				7627D11B278F23DE0030EA65 /* SearchHistoryProtocol.swift */,
+				76C84D6E278C96A100C327FA /* ListViewModelProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		76B95FF7278D8BE900ED5DA4 /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -170,7 +195,9 @@
 			children = (
 				76B96000278D8E7500ED5DA4 /* Info.plist */,
 				76B95FF7278D8BE900ED5DA4 /* Services */,
+				762B4476278F300100BB28F0 /* Database */,
 				76C84D6B278C8C0800C327FA /* ViewModel */,
+				762B4479278F36BC00BB28F0 /* Protocols */,
 				76C84D66278C8B1400C327FA /* View */,
 				76C84D61278C8AE100C327FA /* Model */,
 				76B96001278D918900ED5DA4 /* Repository */,
@@ -227,6 +254,7 @@
 				76C84D69278C8B5900C327FA /* CardView.swift */,
 				76B96017278E0D6500ED5DA4 /* EndListView.swift */,
 				7627D114278F18970030EA65 /* SearchBarView.swift */,
+				762B4474278F27E000BB28F0 /* SearchHistoryView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -235,7 +263,6 @@
 			isa = PBXGroup;
 			children = (
 				76C84D6C278C957700C327FA /* ItemListViewModel.swift */,
-				76C84D6E278C96A100C327FA /* ListViewModelProtocol.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -283,6 +310,7 @@
 			packageProductDependencies = (
 				76B95FFB278D8C7E00ED5DA4 /* NetworkProvider */,
 				76B96015278DE01A00ED5DA4 /* Kingfisher */,
+				762B4472278F262B00BB28F0 /* SQLite */,
 			);
 			productName = Mobiquity;
 			productReference = 76C84D34278C818F00C327FA /* Mobiquity.app */;
@@ -358,6 +386,7 @@
 			mainGroup = 76C84D2B278C818F00C327FA;
 			packageReferences = (
 				76B96014278DE01A00ED5DA4 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				762B4471278F262B00BB28F0 /* XCRemoteSwiftPackageReference "SQLite.swift" */,
 			);
 			productRefGroup = 76C84D35278C818F00C327FA /* Products */;
 			projectDirPath = "";
@@ -404,7 +433,10 @@
 				76C84D3A278C818F00C327FA /* ContentView.swift in Sources */,
 				76B96018278E0D6500ED5DA4 /* EndListView.swift in Sources */,
 				76B95FF9278D8C0600ED5DA4 /* FlickrService.swift in Sources */,
+				7627D11C278F23DE0030EA65 /* SearchHistoryProtocol.swift in Sources */,
 				76C84D38278C818F00C327FA /* MobiquityApp.swift in Sources */,
+				762B4475278F27E000BB28F0 /* SearchHistoryView.swift in Sources */,
+				762B4478278F301400BB28F0 /* SearchHistoryManager.swift in Sources */,
 				76B96010278DD6C500ED5DA4 /* SearchParameters.swift in Sources */,
 				76B96007278D924E00ED5DA4 /* FlickrServiceClient.swift in Sources */,
 				76B96009278DB2A600ED5DA4 /* ImageList.swift in Sources */,
@@ -766,6 +798,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		762B4471278F262B00BB28F0 /* XCRemoteSwiftPackageReference "SQLite.swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/stephencelis/SQLite.swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.2;
+			};
+		};
 		76B96014278DE01A00ED5DA4 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
@@ -777,6 +817,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		762B4472278F262B00BB28F0 /* SQLite */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 762B4471278F262B00BB28F0 /* XCRemoteSwiftPackageReference "SQLite.swift" */;
+			productName = SQLite;
+		};
 		76B95FFB278D8C7E00ED5DA4 /* NetworkProvider */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = NetworkProvider;
