@@ -14,9 +14,7 @@ enum FlickrService {
 
 extension FlickrService: NetworkService {
     var baseURL: String {
-        guard let baseURL = Bundle.main.object(
-          forInfoDictionaryKey: "FLICKR_BASE_URL"
-        ) as? String, !baseURL.isEmpty else {
+        guard let baseURL = Bundle.main.object(forInfoDictionaryKey: "FLICKR_BASE_URL") as? String, !baseURL.isEmpty else {
           fatalError("FLICKR_BASE_URL can't be nil or empty")
         }
         return baseURL
@@ -35,9 +33,7 @@ extension FlickrService: NetworkService {
     }
     
     public var apiKey: String {
-        guard let apiKey = Bundle.main.object(
-            forInfoDictionaryKey: "FLICKR_API_KEY"
-        ) as? String, !apiKey.isEmpty else {
+        guard let apiKey = Bundle.main.object(forInfoDictionaryKey: "FLICKR_API_KEY") as? String, !apiKey.isEmpty else {
             fatalError("FLICKR_API_KEY can't be nil or empty")
         }
         return apiKey
@@ -65,7 +61,7 @@ extension FlickrService: NetworkService {
               queryItems.append(contentsOf: [methodQueryItem])
           }
           let pageQueryItem = URLQueryItem(name: "page", value: String(parameters?.page ?? 1))
-          let perPageQueryItem = URLQueryItem(name: "per_page", value: String(50))
+          let perPageQueryItem = URLQueryItem(name: "per_page", value: String(25))
           queryItems.append(contentsOf: [pageQueryItem, perPageQueryItem])
       }
       

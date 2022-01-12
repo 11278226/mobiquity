@@ -9,42 +9,44 @@ import UIKit
 import SwiftUI
 
 struct ContentView: View {
-    @ObservedObject var viewModel: ItemListViewModel
+    @StateObject var viewModel: ItemListViewModel = ItemListViewModel()
     @State private var searchText = ""
     @State private var page: Int = 1
+    @State var gotoSearchPage: Bool = false
     
     var columns: [GridItem] = [
         GridItem(.flexible()),
         GridItem(.flexible()),
     ]
-    let height: CGFloat = 300
-    
-    init() {
-        self.viewModel = ItemListViewModel()
-    }
+    let height: CGFloat = 260
     
     var body: some View {
-        VStack {
-            SearchBarView(viewModel: viewModel, searchText: $searchText, page: $page)
-            ScrollView {
-                LazyVGrid(columns: columns, spacing: 16) {
-                    ForEach(viewModel.datasource) { item in
-                        CardView(item: item)
-                            .frame(height: height)
-                    }
-                    EndListView()
-                        .onAppear {
-                            if !viewModel.datasource.isEmpty {
-                                page += 1
-                                viewModel.loadData(searchParameters: SearchParameters(text: searchText, page: page))
-                            }
+        NavigationView {
+            VStack {
+                SearchBarView(viewModel: viewModel, searchText: $searchText, page: $page)
+                ScrollView {
+                    LazyVGrid(columns: columns, spacing: 16) {
+                        ForEach(viewModel.datasource) { item in
+                            CardView(item: item)
+                                .frame(height: height)
                         }
+                        EndListView()
+                            .onAppear {
+                                if !viewModel.datasource.isEmpty {
+                                    page += 1
+                                    viewModel.loadData(searchParameters: SearchParameters(text: searchText, page: page))
+                                }
+                            }
+                    }
+                    .padding()
+                }.onAppear {
+                    viewModel.loadData(searchParameters: SearchParameters(text: searchText, page: page))
                 }
-                .padding()
-            }.onAppear {
-                viewModel.loadData(searchParameters: SearchParameters(text: searchText, page: page))
             }
+            .navigationBarTitle("")
+            .navigationBarHidden(true)
         }
+        
     }
 }
 

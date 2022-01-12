@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SearchBarView: View {
-    @StateObject var viewModel: ItemListViewModel
+    @ObservedObject var viewModel: ItemListViewModel
     @Binding var searchText: String
     @Binding var page: Int
     
@@ -22,8 +22,12 @@ struct SearchBarView: View {
                      page = 1
                      viewModel.loadData(searchParameters: SearchParameters(text: searchText, page: page))
                  })
+                 NavigationLink(destination: SearchHistoryView(searchHistory: viewModel.fetchSearchHistory(), searchText: $searchText, page: $page)) {
+                     Image(systemName: "gobackward").foregroundColor(.black)
+                 }
              }
              .padding(.leading, 12)
+             .padding(.trailing, 12)
         }
         .frame(height: 40)
         .padding()

@@ -11,6 +11,7 @@ class ItemListViewModel: ListViewModelProtocol {
     @Published private(set) var datasource: [Item] = []
     private var repository: FlickrRepositoryProtocol
     private var cancellables = Set<AnyCancellable>()
+    private var searchHistory: [String] = []
 
     init(repository: FlickrRepositoryProtocol = FlickrRepository()) {
         self.repository = repository
@@ -18,6 +19,8 @@ class ItemListViewModel: ListViewModelProtocol {
     
     func loadData(searchParameters: SearchParameters) {
         guard let flickrRepo = repository as? FlickrRepository, searchParameters.page < 6 else { return }
+                
+        addSearchToHistory(searchParameters: searchParameters)
 
         flickrRepo.getImages(searchParameters: searchParameters)
 
@@ -31,6 +34,20 @@ class ItemListViewModel: ListViewModelProtocol {
             self.handleFailure(error: someError)
         }
         .store(in: &cancellables)
+    }
+    
+    func fetchSearchHistory() -> [String] {
+        SearchHistoryManager().fetchSearchHistory()
+    }
+    
+    private func addSearchToHistory(searchParameters: SearchParameters) {
+        if !searchParameters.text.isEmpty {
+            // add the searched text in SQLite database if NOT exists
+            let isExists: Bool = SearchHistoryManager().isExists(searchedText: searchParameters.text)
+            if (!isExists) {
+                SearchHistoryManager().addSearchText(searchText: searchParameters.text)
+            }
+        }
     }
 }
 

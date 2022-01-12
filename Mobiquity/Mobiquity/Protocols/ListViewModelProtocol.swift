@@ -12,4 +12,5 @@ protocol ListViewModelProtocol: ObservableObject {
 
     var datasource: DataItem { get }
     func loadData(searchParameters: SearchParameters)
+    func fetchSearchHistory() -> [String]
 }
