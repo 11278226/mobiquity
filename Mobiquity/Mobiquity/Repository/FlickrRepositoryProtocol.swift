@@ -8,5 +8,5 @@
 import Foundation
 
 protocol FlickrRepositoryProtocol {
-  func getImages()
+    func getImages(searchParameters: SearchParameters)
 }

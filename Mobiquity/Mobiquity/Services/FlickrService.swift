@@ -9,7 +9,7 @@ import Foundation
 import NetworkProvider
 
 enum FlickrService {
-    case getImages(parameters: SearchParameters? = SearchParameters(text: "", page: 1, perPage: 20))
+    case getImages(parameters: SearchParameters? = SearchParameters(text: "", page: 1))
 }
 
 extension FlickrService: NetworkService {
@@ -65,7 +65,7 @@ extension FlickrService: NetworkService {
               queryItems.append(contentsOf: [methodQueryItem])
           }
           let pageQueryItem = URLQueryItem(name: "page", value: String(parameters?.page ?? 1))
-          let perPageQueryItem = URLQueryItem(name: "per_page", value: String(parameters?.perPage ?? 20))
+          let perPageQueryItem = URLQueryItem(name: "per_page", value: String(50))
           queryItems.append(contentsOf: [pageQueryItem, perPageQueryItem])
       }
       

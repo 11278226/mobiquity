@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7627D115278F18970030EA65 /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7627D114278F18970030EA65 /* SearchBarView.swift */; };
 		76B95FF9278D8C0600ED5DA4 /* FlickrService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B95FF8278D8C0600ED5DA4 /* FlickrService.swift */; };
 		76B95FFC278D8C7E00ED5DA4 /* NetworkProvider in Frameworks */ = {isa = PBXBuildFile; productRef = 76B95FFB278D8C7E00ED5DA4 /* NetworkProvider */; };
 		76B96003278D91A600ED5DA4 /* FlickrRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B96002278D91A600ED5DA4 /* FlickrRepository.swift */; };
@@ -17,6 +18,7 @@
 		76B9600E278DC80300ED5DA4 /* MockService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B9600D278DC80300ED5DA4 /* MockService.swift */; };
 		76B96010278DD6C500ED5DA4 /* SearchParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B9600F278DD6C500ED5DA4 /* SearchParameters.swift */; };
 		76B96016278DE01A00ED5DA4 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 76B96015278DE01A00ED5DA4 /* Kingfisher */; };
+		76B96018278E0D6500ED5DA4 /* EndListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B96017278E0D6500ED5DA4 /* EndListView.swift */; };
 		76C84D38278C818F00C327FA /* MobiquityApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C84D37278C818F00C327FA /* MobiquityApp.swift */; };
 		76C84D3A278C818F00C327FA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C84D39278C818F00C327FA /* ContentView.swift */; };
 		76C84D3C278C819100C327FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76C84D3B278C819100C327FA /* Assets.xcassets */; };
@@ -51,6 +53,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7627D114278F18970030EA65 /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
 		76B95FF8278D8C0600ED5DA4 /* FlickrService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrService.swift; sourceTree = "<group>"; };
 		76B96000278D8E7500ED5DA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		76B96002278D91A600ED5DA4 /* FlickrRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrRepository.swift; sourceTree = "<group>"; };
@@ -60,6 +63,7 @@
 		76B9600B278DC73400ED5DA4 /* MockServiceClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockServiceClient.swift; sourceTree = "<group>"; };
 		76B9600D278DC80300ED5DA4 /* MockService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockService.swift; sourceTree = "<group>"; };
 		76B9600F278DD6C500ED5DA4 /* SearchParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchParameters.swift; sourceTree = "<group>"; };
+		76B96017278E0D6500ED5DA4 /* EndListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndListView.swift; sourceTree = "<group>"; };
 		76C84D34278C818F00C327FA /* Mobiquity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mobiquity.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		76C84D37278C818F00C327FA /* MobiquityApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobiquityApp.swift; sourceTree = "<group>"; };
 		76C84D39278C818F00C327FA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -221,6 +225,8 @@
 			children = (
 				76C84D39278C818F00C327FA /* ContentView.swift */,
 				76C84D69278C8B5900C327FA /* CardView.swift */,
+				76B96017278E0D6500ED5DA4 /* EndListView.swift */,
+				7627D114278F18970030EA65 /* SearchBarView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -396,6 +402,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				76C84D3A278C818F00C327FA /* ContentView.swift in Sources */,
+				76B96018278E0D6500ED5DA4 /* EndListView.swift in Sources */,
 				76B95FF9278D8C0600ED5DA4 /* FlickrService.swift in Sources */,
 				76C84D38278C818F00C327FA /* MobiquityApp.swift in Sources */,
 				76B96010278DD6C500ED5DA4 /* SearchParameters.swift in Sources */,
@@ -404,6 +411,7 @@
 				76C84D6A278C8B5900C327FA /* CardView.swift in Sources */,
 				76B96005278D91B500ED5DA4 /* FlickrRepositoryProtocol.swift in Sources */,
 				76B96003278D91A600ED5DA4 /* FlickrRepository.swift in Sources */,
+				7627D115278F18970030EA65 /* SearchBarView.swift in Sources */,
 				76C84D65278C8B0900C327FA /* Item.swift in Sources */,
 				76C84D6D278C957700C327FA /* ItemListViewModel.swift in Sources */,
 				76C84D6F278C96A100C327FA /* ListViewModelProtocol.swift in Sources */,
