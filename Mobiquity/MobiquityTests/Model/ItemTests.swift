@@ -5,21 +5,31 @@
 //  Created by Diarmuid O'Keeffe on 10/01/2022.
 //
 
+@testable import Mobiquity
 import XCTest
 
 class ItemTests: XCTestCase {
+    
+    var item: Item!
 
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        item = Item(id: "1", owner: "owner", secret: "secret", server: "server", farm: 1, title: "title", isPublic: 1, isFriend: 0, isFamily: 0)
     }
 
     override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        item = nil
     }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testItemStruct() throws {
+        XCTAssertEqual(item.id, "1")
+        XCTAssertEqual(item.owner, "owner")
+        XCTAssertEqual(item.secret, "secret")
+        XCTAssertEqual(item.server, "server")
+        XCTAssertEqual(item.farm, 1)
+        XCTAssertEqual(item.title, "title")
+        XCTAssertEqual(item.isPublic, 1)
+        XCTAssertEqual(item.isFriend, 0)
+        XCTAssertEqual(item.isFamily, 0)
     }
 
 }

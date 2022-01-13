@@ -12,7 +12,6 @@ struct ContentView: View {
     @StateObject var viewModel: ItemListViewModel = ItemListViewModel()
     @State private var searchText = ""
     @State private var page: Int = 1
-    @State var gotoSearchPage: Bool = false
     
     var columns: [GridItem] = [
         GridItem(.flexible()),
@@ -46,6 +45,12 @@ struct ContentView: View {
             .navigationBarTitle("")
             .navigationBarHidden(true)
         }
+        .alert(isPresented: $viewModel.showError, content: {
+            Alert(
+              title: Text("Error"),
+              message: Text(viewModel.errorMessage ?? "")
+            )
+          })
         
     }
 }

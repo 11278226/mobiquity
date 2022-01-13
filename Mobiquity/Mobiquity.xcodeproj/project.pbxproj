@@ -11,7 +11,7 @@
 		7627D11C278F23DE0030EA65 /* SearchHistoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7627D11B278F23DE0030EA65 /* SearchHistoryProtocol.swift */; };
 		762B4473278F262B00BB28F0 /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = 762B4472278F262B00BB28F0 /* SQLite */; };
 		762B4475278F27E000BB28F0 /* SearchHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762B4474278F27E000BB28F0 /* SearchHistoryView.swift */; };
-		762B4478278F301400BB28F0 /* SearchHistoryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762B4477278F301400BB28F0 /* SearchHistoryManager.swift */; };
+		762B4478278F301400BB28F0 /* SearchHistoryDBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762B4477278F301400BB28F0 /* SearchHistoryDBManager.swift */; };
 		76B95FF9278D8C0600ED5DA4 /* FlickrService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B95FF8278D8C0600ED5DA4 /* FlickrService.swift */; };
 		76B95FFC278D8C7E00ED5DA4 /* NetworkProvider in Frameworks */ = {isa = PBXBuildFile; productRef = 76B95FFB278D8C7E00ED5DA4 /* NetworkProvider */; };
 		76B96003278D91A600ED5DA4 /* FlickrRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B96002278D91A600ED5DA4 /* FlickrRepository.swift */; };
@@ -37,6 +37,7 @@
 		76C84D74278CBACC00C327FA /* ItemListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C84D73278CBACC00C327FA /* ItemListViewModelTests.swift */; };
 		76C84D76278CBAE000C327FA /* CardViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C84D75278CBAE000C327FA /* CardViewTests.swift */; };
 		76C84D78278CBAF000C327FA /* ItemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C84D77278CBAF000C327FA /* ItemTests.swift */; };
+		76F934A8279036BD008AEBA2 /* SearchHistoryDBManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F934A7279036BD008AEBA2 /* SearchHistoryDBManagerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,7 +61,7 @@
 		7627D114278F18970030EA65 /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
 		7627D11B278F23DE0030EA65 /* SearchHistoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHistoryProtocol.swift; sourceTree = "<group>"; };
 		762B4474278F27E000BB28F0 /* SearchHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHistoryView.swift; sourceTree = "<group>"; };
-		762B4477278F301400BB28F0 /* SearchHistoryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHistoryManager.swift; sourceTree = "<group>"; };
+		762B4477278F301400BB28F0 /* SearchHistoryDBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHistoryDBManager.swift; sourceTree = "<group>"; };
 		76B95FF8278D8C0600ED5DA4 /* FlickrService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrService.swift; sourceTree = "<group>"; };
 		76B96000278D8E7500ED5DA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		76B96002278D91A600ED5DA4 /* FlickrRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrRepository.swift; sourceTree = "<group>"; };
@@ -88,6 +89,7 @@
 		76C84D73278CBACC00C327FA /* ItemListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListViewModelTests.swift; sourceTree = "<group>"; };
 		76C84D75278CBAE000C327FA /* CardViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewTests.swift; sourceTree = "<group>"; };
 		76C84D77278CBAF000C327FA /* ItemTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTests.swift; sourceTree = "<group>"; };
+		76F934A7279036BD008AEBA2 /* SearchHistoryDBManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHistoryDBManagerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,7 +123,7 @@
 		762B4476278F300100BB28F0 /* Database */ = {
 			isa = PBXGroup;
 			children = (
-				762B4477278F301400BB28F0 /* SearchHistoryManager.swift */,
+				762B4477278F301400BB28F0 /* SearchHistoryDBManager.swift */,
 			);
 			path = Database;
 			sourceTree = "<group>";
@@ -129,6 +131,7 @@
 		762B4479278F36BC00BB28F0 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				76B96004278D91B500ED5DA4 /* FlickrRepositoryProtocol.swift */,
 				7627D11B278F23DE0030EA65 /* SearchHistoryProtocol.swift */,
 				76C84D6E278C96A100C327FA /* ListViewModelProtocol.swift */,
 			);
@@ -155,7 +158,6 @@
 			isa = PBXGroup;
 			children = (
 				76B96002278D91A600ED5DA4 /* FlickrRepository.swift */,
-				76B96004278D91B500ED5DA4 /* FlickrRepositoryProtocol.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -219,6 +221,7 @@
 		76C84D47278C819100C327FA /* MobiquityTests */ = {
 			isa = PBXGroup;
 			children = (
+				76F934A427903538008AEBA2 /* Database */,
 				76B9600A278DC71F00ED5DA4 /* Services */,
 				76C84D70278CBA9200C327FA /* ViewModel */,
 				76C84D71278CBA9A00C327FA /* View */,
@@ -289,6 +292,14 @@
 				76C84D77278CBAF000C327FA /* ItemTests.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		76F934A427903538008AEBA2 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				76F934A7279036BD008AEBA2 /* SearchHistoryDBManagerTests.swift */,
+			);
+			path = Database;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -436,7 +447,7 @@
 				7627D11C278F23DE0030EA65 /* SearchHistoryProtocol.swift in Sources */,
 				76C84D38278C818F00C327FA /* MobiquityApp.swift in Sources */,
 				762B4475278F27E000BB28F0 /* SearchHistoryView.swift in Sources */,
-				762B4478278F301400BB28F0 /* SearchHistoryManager.swift in Sources */,
+				762B4478278F301400BB28F0 /* SearchHistoryDBManager.swift in Sources */,
 				76B96010278DD6C500ED5DA4 /* SearchParameters.swift in Sources */,
 				76B96007278D924E00ED5DA4 /* FlickrServiceClient.swift in Sources */,
 				76B96009278DB2A600ED5DA4 /* ImageList.swift in Sources */,
@@ -458,6 +469,7 @@
 				76C84D49278C819100C327FA /* MobiquityTests.swift in Sources */,
 				76B9600C278DC73400ED5DA4 /* MockServiceClient.swift in Sources */,
 				76C84D74278CBACC00C327FA /* ItemListViewModelTests.swift in Sources */,
+				76F934A8279036BD008AEBA2 /* SearchHistoryDBManagerTests.swift in Sources */,
 				76C84D76278CBAE000C327FA /* CardViewTests.swift in Sources */,
 				76B9600E278DC80300ED5DA4 /* MockService.swift in Sources */,
 			);

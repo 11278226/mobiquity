@@ -12,6 +12,7 @@ struct SearchHistoryView: View {
     var searchHistory: [String]
     @Binding var searchText: String
     @Binding var page: Int
+    static let navigationTitle = "Search History"
     
     var body: some View {
         List {
@@ -24,6 +25,6 @@ struct SearchHistoryView: View {
                     }
             }
         }
-        .navigationTitle("Search History")
+        .navigationTitle(SearchHistoryView.navigationTitle)
     }
 }
