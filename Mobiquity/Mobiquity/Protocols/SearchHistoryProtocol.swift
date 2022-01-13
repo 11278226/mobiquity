@@ -11,4 +11,5 @@ protocol SearchHistoryProtocol {
     func fetchSearchHistory() -> [String]
     func addSearchText(searchText: String)
     func isExists(searchedText: String) -> Bool
+    func removeTextFromSearchHistory(text: String)
 }

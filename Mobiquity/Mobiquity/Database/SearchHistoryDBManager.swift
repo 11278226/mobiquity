@@ -1,5 +1,5 @@
 //
-//  SearchHistoryManager.swift
+//  SearchHistoryDBManager.swift
 //  Mobiquity
 //
 //  Created by Diarmuid O'Keeffe on 12/01/2022.
@@ -8,14 +8,13 @@
 import Foundation
 import SQLite
  
-class SearchHistoryManager {
-
+class SearchHistoryDBManager {
     private var db: Connection!
     private var searchHistory: Table!
     private var id: Expression<Int64>!
     private var name: Expression<String>!
      
-    init () {
+    init() {
         do {
             let path: String = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first ?? ""
             db = try Connection("\(path)/search_history.sqlite3")
@@ -37,7 +36,7 @@ class SearchHistoryManager {
     
 }
 
-extension SearchHistoryManager: SearchHistoryProtocol {
+extension SearchHistoryDBManager: SearchHistoryProtocol {
     func isExists(searchedText: String) -> Bool {
         var isExists: Bool = false
         do {
@@ -67,5 +66,14 @@ extension SearchHistoryManager: SearchHistoryProtocol {
             return row[name]
         }
         return searchHistory
+    }
+    
+    func removeTextFromSearchHistory(text: String) {
+        do {
+            let searchText: Table = searchHistory.filter(name == text)
+            try db.run(searchText.delete())
+        } catch {
+            print(error.localizedDescription)
+        }
     }
 }

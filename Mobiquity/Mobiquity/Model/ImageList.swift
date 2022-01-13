@@ -22,7 +22,7 @@ struct ImageList: Decodable {
         case totalResults = "total"
     }
     
-    init(page: Int = 1, photos: [Item] = [], perPage: Int = 2, totalPages: Int = 1, totalResults: Int = 0) {
+    init(page: Int = 1, photos: [Item] = [], perPage: Int = 25, totalPages: Int = 1, totalResults: Int = 0) {
         self.page = page
         self.photos = photos
         self.perPage = perPage

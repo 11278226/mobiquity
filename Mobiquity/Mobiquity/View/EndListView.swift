@@ -11,6 +11,6 @@ struct EndListView: View {
     var body: some View {
         Rectangle()
             .frame(height: 20)
-            .foregroundColor(.white)
+            .foregroundColor(.clear)
     }
 }

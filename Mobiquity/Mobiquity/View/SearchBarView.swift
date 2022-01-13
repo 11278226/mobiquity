@@ -8,9 +8,11 @@
 import SwiftUI
 
 struct SearchBarView: View {
+    @Environment(\.colorScheme) var colorScheme
     @ObservedObject var viewModel: ItemListViewModel
     @Binding var searchText: String
     @Binding var page: Int
+    static let placeholderText = "Search .."
     
     var body: some View {
         ZStack {
@@ -18,12 +20,13 @@ struct SearchBarView: View {
                 .stroke(Color.gray, lineWidth: 2)
              HStack {
                  Image(systemName: "magnifyingglass")
-                 TextField("Search ..", text: $searchText, onCommit: {
+                 TextField(SearchBarView.placeholderText, text: $searchText, onCommit: {
                      page = 1
                      viewModel.loadData(searchParameters: SearchParameters(text: searchText, page: page))
                  })
                  NavigationLink(destination: SearchHistoryView(searchHistory: viewModel.fetchSearchHistory(), searchText: $searchText, page: $page)) {
-                     Image(systemName: "gobackward").foregroundColor(.black)
+                     Image(systemName: "gobackward").foregroundColor(colorScheme == .dark ? Color.white : Color.black)
+                     
                  }
              }
              .padding(.leading, 12)
