@@ -4,11 +4,4 @@
    <FileRef
       location = "container:Mobiquity/Mobiquity.xcodeproj">
    </FileRef>
-   <Group
-      location = "group:Packages"
-      name = "Packages">
-      <FileRef
-         location = "group:NetworkProvider">
-      </FileRef>
-   </Group>
 </Workspace>

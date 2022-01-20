@@ -90,6 +90,7 @@
 		76C84D75278CBAE000C327FA /* CardViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewTests.swift; sourceTree = "<group>"; };
 		76C84D77278CBAF000C327FA /* ItemTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTests.swift; sourceTree = "<group>"; };
 		76F934A7279036BD008AEBA2 /* SearchHistoryDBManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHistoryDBManagerTests.swift; sourceTree = "<group>"; };
+		7E22D5852799A54E004ABD7D /* NetworkProvider */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = NetworkProvider; path = ../Packages/NetworkProvider; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +175,7 @@
 		76C84D2B278C818F00C327FA = {
 			isa = PBXGroup;
 			children = (
+				7E22D5842799A54E004ABD7D /* Packages */,
 				76C84D36278C818F00C327FA /* Mobiquity */,
 				76C84D47278C819100C327FA /* MobiquityTests */,
 				76C84D51278C819100C327FA /* MobiquityUITests */,
@@ -300,6 +302,14 @@
 				76F934A7279036BD008AEBA2 /* SearchHistoryDBManagerTests.swift */,
 			);
 			path = Database;
+			sourceTree = "<group>";
+		};
+		7E22D5842799A54E004ABD7D /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				7E22D5852799A54E004ABD7D /* NetworkProvider */,
+			);
+			name = Packages;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
