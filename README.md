@@ -13,7 +13,7 @@ Description: Simple app that retrieves json list of images from a Flickr api and
 Build Issue noticed on Xcode 13.2.1
 
 It's been brought to my attention that the local package NetworkProvider can sometimes initially have a build issue and show the error "Missing Package Product".
-This seems to be an issue experienced elsewhere with Xcode 13.2.1 and SwiftPackageManager and with no clear resolution yet
+This seems to be an issue experienced elsewhere with Xcode 13.2.1 and SwiftPackageManager and with no clear resolution yet but is fixable locally
  https://stackoverflow.com/questions/69281786/local-swift-packages-stopped-working-in-xcode-13
 
 To resolve this either
