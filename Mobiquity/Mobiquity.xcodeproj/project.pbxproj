@@ -13,7 +13,6 @@
 		762B4475278F27E000BB28F0 /* SearchHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762B4474278F27E000BB28F0 /* SearchHistoryView.swift */; };
 		762B4478278F301400BB28F0 /* SearchHistoryDBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762B4477278F301400BB28F0 /* SearchHistoryDBManager.swift */; };
 		76B95FF9278D8C0600ED5DA4 /* FlickrService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B95FF8278D8C0600ED5DA4 /* FlickrService.swift */; };
-		76B95FFC278D8C7E00ED5DA4 /* NetworkProvider in Frameworks */ = {isa = PBXBuildFile; productRef = 76B95FFB278D8C7E00ED5DA4 /* NetworkProvider */; };
 		76B96003278D91A600ED5DA4 /* FlickrRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B96002278D91A600ED5DA4 /* FlickrRepository.swift */; };
 		76B96005278D91B500ED5DA4 /* FlickrRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B96004278D91B500ED5DA4 /* FlickrRepositoryProtocol.swift */; };
 		76B96007278D924E00ED5DA4 /* FlickrServiceClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B96006278D924E00ED5DA4 /* FlickrServiceClient.swift */; };
@@ -38,6 +37,7 @@
 		76C84D76278CBAE000C327FA /* CardViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C84D75278CBAE000C327FA /* CardViewTests.swift */; };
 		76C84D78278CBAF000C327FA /* ItemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C84D77278CBAF000C327FA /* ItemTests.swift */; };
 		76F934A8279036BD008AEBA2 /* SearchHistoryDBManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F934A7279036BD008AEBA2 /* SearchHistoryDBManagerTests.swift */; };
+		7E22E2DE27B40109006C54B4 /* NetworkProvider in Frameworks */ = {isa = PBXBuildFile; productRef = 7E22E2DD27B40109006C54B4 /* NetworkProvider */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +90,7 @@
 		76C84D75278CBAE000C327FA /* CardViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewTests.swift; sourceTree = "<group>"; };
 		76C84D77278CBAF000C327FA /* ItemTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTests.swift; sourceTree = "<group>"; };
 		76F934A7279036BD008AEBA2 /* SearchHistoryDBManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHistoryDBManagerTests.swift; sourceTree = "<group>"; };
+		7E22E2DC27B400D4006C54B4 /* NetworkProvider */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = NetworkProvider; path = ../NetworkProvider; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,9 +98,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E22E2DE27B40109006C54B4 /* NetworkProvider in Frameworks */,
 				762B4473278F262B00BB28F0 /* SQLite in Frameworks */,
 				76B96016278DE01A00ED5DA4 /* Kingfisher in Frameworks */,
-				76B95FFC278D8C7E00ED5DA4 /* NetworkProvider in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -174,6 +175,7 @@
 		76C84D2B278C818F00C327FA = {
 			isa = PBXGroup;
 			children = (
+				7E22E2DB27B400D4006C54B4 /* Packages */,
 				76C84D36278C818F00C327FA /* Mobiquity */,
 				76C84D47278C819100C327FA /* MobiquityTests */,
 				76C84D51278C819100C327FA /* MobiquityUITests */,
@@ -302,6 +304,14 @@
 			path = Database;
 			sourceTree = "<group>";
 		};
+		7E22E2DB27B400D4006C54B4 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				7E22E2DC27B400D4006C54B4 /* NetworkProvider */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -319,9 +329,9 @@
 			);
 			name = Mobiquity;
 			packageProductDependencies = (
-				76B95FFB278D8C7E00ED5DA4 /* NetworkProvider */,
 				76B96015278DE01A00ED5DA4 /* Kingfisher */,
 				762B4472278F262B00BB28F0 /* SQLite */,
+				7E22E2DD27B40109006C54B4 /* NetworkProvider */,
 			);
 			productName = Mobiquity;
 			productReference = 76C84D34278C818F00C327FA /* Mobiquity.app */;
@@ -834,14 +844,14 @@
 			package = 762B4471278F262B00BB28F0 /* XCRemoteSwiftPackageReference "SQLite.swift" */;
 			productName = SQLite;
 		};
-		76B95FFB278D8C7E00ED5DA4 /* NetworkProvider */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = NetworkProvider;
-		};
 		76B96015278DE01A00ED5DA4 /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 76B96014278DE01A00ED5DA4 /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
+		};
+		7E22E2DD27B40109006C54B4 /* NetworkProvider */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = NetworkProvider;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
